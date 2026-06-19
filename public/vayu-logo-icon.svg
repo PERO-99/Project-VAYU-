@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Circular Boundary/Wave background (Teal) -->
+  <path d="M50 10 A40 40 0 1 0 50 90 A40 40 0 0 0 50 10 Z" fill="none" stroke="#0E4C53" stroke-width="3" stroke-dasharray="100 150"/>
+  
+  <!-- Wind/Wave swirls (Left side) -->
+  <path d="M15 50 Q30 20 50 35 T50 70 Q30 80 15 50" fill="none" stroke="#0E4C53" stroke-width="4" stroke-linecap="round"/>
+  <path d="M25 45 Q35 30 45 40 T40 60" fill="none" stroke="#0E4C53" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="45" cy="50" r="3" fill="#0E4C53" />
+  <circle cx="35" cy="70" r="2" fill="#0E4C53" />
+
+  <!-- Footprint (Right side) -->
+  <path d="M60 75 C 50 65, 60 45, 65 35 C 70 25, 80 35, 75 55 C 70 75, 80 80, 60 75 Z" fill="#3D8B40"/>
+  
+  <!-- Toes -->
+  <circle cx="85" cy="40" r="3" fill="#3D8B40"/>
+  <circle cx="90" cy="48" r="2.5" fill="#3D8B40"/>
+  <circle cx="93" cy="55" r="2" fill="#3D8B40"/>
+  <circle cx="94" cy="62" r="1.5" fill="#3D8B40"/>
+
+  <!-- Leaves sprouting from top of footprint -->
+  <path d="M65 35 Q 55 15 65 15 Q 70 25 65 35" fill="#58A55C"/>
+  <path d="M65 35 Q 75 20 85 25 Q 75 35 65 35" fill="#58A55C"/>
+  <path d="M75 30 Q 85 15 95 20 Q 85 30 75 30" fill="#58A55C"/>
+</svg>

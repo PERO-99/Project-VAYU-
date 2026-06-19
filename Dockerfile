@@ -1,0 +1,23 @@
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+
+ARG VITE_GEMINI_API_KEY
+ARG VITE_CONTACT_EMAIL
+ARG VITE_INSTAGRAM_URL
+ARG VITE_WEB3FORMS_KEY
+
+ENV VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY
+ENV VITE_CONTACT_EMAIL=$VITE_CONTACT_EMAIL
+ENV VITE_INSTAGRAM_URL=$VITE_INSTAGRAM_URL
+ENV VITE_WEB3FORMS_KEY=$VITE_WEB3FORMS_KEY
+
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]

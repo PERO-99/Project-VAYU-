@@ -1,0 +1,36 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--build-arg'
+      - 'VITE_GEMINI_API_KEY=$_VITE_GEMINI_API_KEY'
+      - '--build-arg'
+      - 'VITE_CONTACT_EMAIL=$_VITE_CONTACT_EMAIL'
+      - '--build-arg'
+      - 'VITE_INSTAGRAM_URL=$_VITE_INSTAGRAM_URL'
+      - '--build-arg'
+      - 'VITE_WEB3FORMS_KEY=$_VITE_WEB3FORMS_KEY'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/vayu-app:$COMMIT_SHA'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/vayu-app:$COMMIT_SHA']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'vayu-app'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/vayu-app:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/$PROJECT_ID/vayu-app:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
