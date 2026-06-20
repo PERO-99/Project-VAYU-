@@ -1,24 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <!-- Circular Boundary/Wave background (Teal) -->
-  <path d="M50 10 A40 40 0 1 0 50 90 A40 40 0 0 0 50 10 Z" fill="none" stroke="#0E4C53" stroke-width="3" stroke-dasharray="100 150"/>
-  
-  <!-- Wind/Wave swirls (Left side) -->
-  <path d="M15 50 Q30 20 50 35 T50 70 Q30 80 15 50" fill="none" stroke="#0E4C53" stroke-width="4" stroke-linecap="round"/>
-  <path d="M25 45 Q35 30 45 40 T40 60" fill="none" stroke="#0E4C53" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="45" cy="50" r="3" fill="#0E4C53" />
-  <circle cx="35" cy="70" r="2" fill="#0E4C53" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <clipPath id="cc-icon">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+  </defs>
 
-  <!-- Footprint (Right side) -->
-  <path d="M60 75 C 50 65, 60 45, 65 35 C 70 25, 80 35, 75 55 C 70 75, 80 80, 60 75 Z" fill="#3D8B40"/>
-  
-  <!-- Toes -->
-  <circle cx="85" cy="40" r="3" fill="#3D8B40"/>
-  <circle cx="90" cy="48" r="2.5" fill="#3D8B40"/>
-  <circle cx="93" cy="55" r="2" fill="#3D8B40"/>
-  <circle cx="94" cy="62" r="1.5" fill="#3D8B40"/>
+  <g clip-path="url(#cc-icon)">
+    <!-- TEAL SIDE: S-curve + left arc fills the wave section -->
+    <!-- Layer 1: darkest teal — outer wave body -->
+    <path d="M80,6 C108,28 54,52 80,80 C106,108 54,132 80,154 A74,74 0 1,1 80,6 Z" fill="#0C6E7C"/>
 
-  <!-- Leaves sprouting from top of footprint -->
-  <path d="M65 35 Q 55 15 65 15 Q 70 25 65 35" fill="#58A55C"/>
-  <path d="M65 35 Q 75 20 85 25 Q 75 35 65 35" fill="#58A55C"/>
-  <path d="M75 30 Q 85 15 95 20 Q 85 30 75 30" fill="#58A55C"/>
+    <!-- Layer 2: medium teal — secondary wave -->
+    <path d="M80,18 C104,36 60,58 80,80 C100,102 60,126 80,144 A63,63 0 1,1 80,18 Z" fill="#1A96A6"/>
+
+    <!-- Layer 3: lighter teal — inner wave curl -->
+    <path d="M80,30 C100,46 64,65 80,80 C96,95 64,116 80,130 A52,52 0 1,1 80,30 Z" fill="#2EBCCE"/>
+
+    <!-- Layer 4: highlight swirl -->
+    <path d="M80,44 C96,55 68,70 80,80 C92,90 68,106 80,117 A40,40 0 1,1 80,44 Z" fill="#50CCDA"/>
+
+    <!-- GREEN SIDE: footprint body -->
+    <path d="M100,128 C88,132 84,116 87,100 C90,84 100,76 112,72 C124,68 138,74 136,92 C134,110 144,126 132,134 C124,140 112,126 100,128 Z" fill="#2E8B50"/>
+
+    <!-- Leaf going left (toward waves) -->
+    <path d="M97,105 C82,95 76,76 80,58 C89,70 97,88 97,105 Z" fill="#3DB865"/>
+    <path d="M97,105 C100,84 110,68 122,58 C120,74 112,90 97,105 Z" fill="#4ECC76"/>
+
+    <!-- Leaf going upper-right -->
+    <path d="M116,76 C118,58 132,46 150,42 C146,56 134,66 116,76 Z" fill="#3DB865"/>
+    <path d="M116,76 C126,60 142,50 160,48 C152,62 136,70 116,76 Z" fill="#4ECC76"/>
+
+    <!-- Small upward sprout -->
+    <path d="M112,70 C108,56 112,42 120,34 C122,46 118,58 112,70 Z" fill="#3DB865"/>
+
+    <!-- Toes (5 rounded ovals in arc) -->
+    <ellipse cx="118" cy="64" rx="5" ry="7" fill="#2E8B50" transform="rotate(-25,118,64)"/>
+    <ellipse cx="130" cy="58" rx="4.5" ry="6.5" fill="#2E8B50" transform="rotate(-12,130,58)"/>
+    <ellipse cx="142" cy="56" rx="4.5" ry="6" fill="#2E8B50" transform="rotate(0,142,56)"/>
+    <ellipse cx="152" cy="60" rx="4" ry="5.5" fill="#2E8B50" transform="rotate(12,152,60)"/>
+    <ellipse cx="158" cy="69" rx="3.5" ry="5" fill="#2E8B50" transform="rotate(22,158,69)"/>
+  </g>
+
+  <!-- Outer circle border -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#0A4A54" stroke-width="5"/>
 </svg>

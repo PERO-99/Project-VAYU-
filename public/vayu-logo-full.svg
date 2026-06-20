@@ -1,54 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 160" width="100%" height="100%">
+  <defs>
+    <clipPath id="cc">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+  </defs>
 
-  <!-- Icon: compact, centered above text -->
-  <g transform="translate(50, 8) scale(0.92)">
+  <!-- ── ICON (left 160px) ── -->
 
-    <!-- Outer dashed circular ring -->
-    <circle cx="50" cy="50" r="42" fill="none" stroke="#0E4C53" stroke-width="2.5" stroke-dasharray="18 10" stroke-dashoffset="5"/>
+  <g clip-path="url(#cc)">
 
-    <!-- Wind / air swirl (left side) -->
-    <path d="M14 50 Q28 24 50 36 T50 68 Q30 78 14 50" fill="none" stroke="#0E4C53" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M24 46 Q36 32 47 42 T43 62" fill="none" stroke="#0E4C53" stroke-width="2" stroke-linecap="round"/>
+    <!-- TEAL SIDE: S-curve + left arc fills the wave section -->
+    <!-- Layer 1: darkest teal — outer wave body -->
+    <path d="M80,6 C108,28 54,52 80,80 C106,108 54,132 80,154 A74,74 0 1,1 80,6 Z" fill="#0C6E7C"/>
 
-    <!-- Dot accents -->
-    <circle cx="46" cy="50" r="2.8" fill="#0E4C53"/>
-    <circle cx="36" cy="68" r="1.8" fill="#0E4C53"/>
+    <!-- Layer 2: medium teal — secondary wave -->
+    <path d="M80,18 C104,36 60,58 80,80 C100,102 60,126 80,144 A63,63 0 1,1 80,18 Z" fill="#1A96A6"/>
 
-    <!-- Footprint body (right) -->
-    <path d="M60 74 C52 65, 60 46, 65 36 C70 26, 80 36, 75 55 C70 74, 80 80, 60 74 Z" fill="#3D8B40"/>
+    <!-- Layer 3: lighter teal — inner wave curl -->
+    <path d="M80,30 C100,46 64,65 80,80 C96,95 64,116 80,130 A52,52 0 1,1 80,30 Z" fill="#2EBCCE"/>
 
-    <!-- Toes -->
-    <circle cx="84" cy="41" r="2.8" fill="#3D8B40"/>
-    <circle cx="89" cy="49" r="2.4" fill="#3D8B40"/>
-    <circle cx="92" cy="57" r="2.0" fill="#3D8B40"/>
-    <circle cx="93" cy="65" r="1.5" fill="#3D8B40"/>
+    <!-- Layer 4: highlight swirl -->
+    <path d="M80,44 C96,55 68,70 80,80 C92,90 68,106 80,117 A40,40 0 1,1 80,44 Z" fill="#50CCDA"/>
 
-    <!-- Leaves from top of footprint -->
-    <path d="M65 36 Q56 16 66 16 Q71 26 65 36" fill="#58A55C"/>
-    <path d="M65 36 Q75 20 85 26 Q75 36 65 36" fill="#58A55C"/>
-    <path d="M75 30 Q86 14 96 20 Q86 30 75 30" fill="#58A55C"/>
+    <!-- GREEN SIDE: footprint body -->
+    <path d="M100,128 C88,132 84,116 87,100 C90,84 100,76 112,72 C124,68 138,74 136,92 C134,110 144,126 132,134 C124,140 112,126 100,128 Z" fill="#2E8B50"/>
+
+    <!-- Leaf going left (toward waves) -->
+    <path d="M97,105 C82,95 76,76 80,58 C89,70 97,88 97,105 Z" fill="#3DB865"/>
+    <path d="M97,105 C100,84 110,68 122,58 C120,74 112,90 97,105 Z" fill="#4ECC76"/>
+
+    <!-- Leaf going upper-right -->
+    <path d="M116,76 C118,58 132,46 150,42 C146,56 134,66 116,76 Z" fill="#3DB865"/>
+    <path d="M116,76 C126,60 142,50 160,48 C152,62 136,70 116,76 Z" fill="#4ECC76"/>
+
+    <!-- Small upward sprout -->
+    <path d="M112,70 C108,56 112,42 120,34 C122,46 118,58 112,70 Z" fill="#3DB865"/>
+
+    <!-- Toes (5 rounded ovals in arc) -->
+    <ellipse cx="118" cy="64" rx="5" ry="7" fill="#2E8B50" transform="rotate(-25,118,64)"/>
+    <ellipse cx="130" cy="58" rx="4.5" ry="6.5" fill="#2E8B50" transform="rotate(-12,130,58)"/>
+    <ellipse cx="142" cy="56" rx="4.5" ry="6" fill="#2E8B50" transform="rotate(0,142,56)"/>
+    <ellipse cx="152" cy="60" rx="4" ry="5.5" fill="#2E8B50" transform="rotate(12,152,60)"/>
+    <ellipse cx="158" cy="69" rx="3.5" ry="5" fill="#2E8B50" transform="rotate(22,158,69)"/>
+
   </g>
 
-  <!-- VAYU wordmark -->
-  <text
-    x="150" y="68"
-    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-weight="800"
-    font-size="52"
-    fill="#0E4C53"
-    letter-spacing="5"
-    text-anchor="middle"
-  >VAYU</text>
+  <!-- Outer circle border -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#0A4A54" stroke-width="5"/>
 
-  <!-- Subtitle -->
-  <text
-    x="150" y="90"
+  <!-- ── TEXT (right side) ── -->
+  <text x="178" y="72"
     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-weight="500"
-    font-size="9.5"
-    fill="#0E4C53"
-    letter-spacing="2.2"
-    text-anchor="middle"
-  >CARBON FOOTPRINT AWARENESS PLATFORM</text>
+    font-weight="800" font-size="46" fill="#0E4C53" letter-spacing="3">VAYU</text>
+
+  <text x="178" y="92"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="500" font-size="8.5" fill="#0E4C53" letter-spacing="1.8">CARBON FOOTPRINT AWARENESS PLATFORM</text>
 
 </svg>
