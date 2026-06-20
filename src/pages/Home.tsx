@@ -219,9 +219,6 @@ export default function Home() {
     setActiveTitle(item?.title ?? null)
   }
 
-  const caption = activeCaption || 'Carbon Footprint Awareness Platform'
-  const title = activeTitle || 'VAYU'
-
   return (
     <main>
       {/* ── HERO: full-width grid + blurry overlay absolutely on the right ── */}
